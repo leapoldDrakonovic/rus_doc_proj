@@ -1,0 +1,28 @@
+.blue_btn {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+    color: var(--main-blue);
+    text-align: center;
+
+    transition: 0.3s linear;
+}
+
+.blue_btn:hover {
+    background-color: var(--main-orange);
+    color: black;
+}
+
+.light_blue_btn {
+    background-color: var(--main-blue);
+    cursor: pointer;
+    color: var(--dark-blue);
+    text-align: center;
+
+    transition: 0.3s linear;
+}
+
+
+.light_blue_btn:hover {
+    background-color: var(--dark-blue);
+    color: white;
+}
