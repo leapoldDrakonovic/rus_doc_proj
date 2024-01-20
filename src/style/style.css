@@ -424,23 +424,27 @@ margin-bottom: 60px;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    cursor: pointer
+    cursor: pointer;
+    height: 100%;
 }
 .faq_list_item_title {
 }
 
 .faq_list_item_answer_container {
-    margin-top: 30px;
-    height: 0px;
-    display: none;
-    transition:all 0.2s ;
+    
+    height: 0;
+    visibility: hidden;
+    transition:all 0.3s linear;
+    color: white;
 }
 
 .faq_list_item_answer_container.active {
-    height: fit-content;
-    display: block;
+    margin-top: 30px;
+    height: 100px;
+    visibility: visible;
+    color: black;
 
-    transition: all .2s;
+    transition: all .3s linear;
     
 }
 .faq_answer {
