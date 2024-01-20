@@ -384,6 +384,57 @@ margin-bottom: 60px;
 
 
 
+/* Секция вопросов */
+
+.faq_section {
+    margin-top: 100px;
+    width: 100%;
+}
+.section_faq_container {
+    width: 100%;
+}
+.section_faq_title {
+    color: var(--dark-blue);
+    font-size: 50px;
+    font-weight: 700;
+}
+.faq_title {
+}
+.section_faq_list_container {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.faq_list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.faq_list_item {
+    width: 100%;
+    padding: 20px 15px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+    ;
+
+}
+
+.faq_list_item_title_container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer
+}
+.faq_list_item_title {
+}
+
+.faq_list_item_answer_container {
+    margin-top: 30px;
+}
+.faq_answer {
+}
+
 
 
 /* UI елементы */
@@ -421,6 +472,11 @@ margin-bottom: 60px;
     font-weight: 500;
     font-size: 18px;
     margin-top: 15px;
+}
+
+.submit_form_btn.not_active {
+    background-color: rgb(103, 103, 103);
+    color: black;
 }
 
 .passport_data_container {
@@ -465,7 +521,7 @@ margin-bottom: 60px;
 .contact_btn {
     outline: none;
     border: none;
-    margin-top: 15px;
+    margin-top: 30px;
     padding: 10px;
     font-weight: 500;
     font-size: 18px;
