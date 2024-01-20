@@ -431,10 +431,28 @@ margin-bottom: 60px;
 
 .faq_list_item_answer_container {
     margin-top: 30px;
+    height: 0px;
+    display: none;
+    transition:all 0.2s ;
+}
+
+.faq_list_item_answer_container.active {
+    height: fit-content;
+    display: block;
+
+    transition: all .2s;
+    
 }
 .faq_answer {
 }
 
+.faq_list_item_img {
+    transition: .1s linear;
+}
+
+.faq_list_item_img.active {
+    transform: rotate(180deg);
+}
 
 
 /* UI елементы */
