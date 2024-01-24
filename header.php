@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php wp_head(); ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/style/style.css">
+    <link rel="stylesheet" href="./src/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>About Us</title>
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Papirs - Landing</title>
 </head>
 <body>
     <main class="page">
@@ -50,28 +50,41 @@
         <header class="header main_header">
             <div class="container header_container">
                 <div class="header_logo">
-                    <h3 class="main_logo">Papir'rs</h3>
+                    <h3 class="main_logo"><a href="/">Papir'rs</a></h3>
                 </div>
                 <nav class="navigation main_navigation">
                     <ul class="main_navigation_list">
                         <li class="main_navigation_list_item">
-                            <a href="" class="main_navigation_link" id="documents_link">Documents</a>
+                            <a href="/documents" class="main_navigation_link" id="documents_link">Documents</a>
                             <div class="dropdown_menu">
                                 <div class="dropdown_menu_container">
                                     <ul class="dropdown_menu_list">
-                                        <li class="dropdown_menu_item"><a href="" class="dropdown_menu_link">Papire papir</a></li>
-                                        <li class="dropdown_menu_item"><a href="" class="dropdown_menu_link">Papire papir</a></li>
-                                        <li class="dropdown_menu_item"><a href="" class="dropdown_menu_link">Papire papir</a></li>
-                                        <li class="dropdown_menu_item"><a href="" class="dropdown_menu_link">Papire papir</a></li>
-                                        <li class="dropdown_menu_item"><a href="" class="dropdown_menu_link">Papire papir</a></li>
-                                        <li class="dropdown_menu_item"><a href="" class="dropdown_menu_link">Papire papir</a></li>
+                                        <?php
+                                        $args = array(
+                                            'post_type' => 'product',
+                                            'posts_per_page' => -1,
+                                        );
+
+                                        $products = new WP_Query($args);
+
+                                        if ($products->have_posts()) :
+                                            while ($products->have_posts()) : $products->the_post();
+                                                ?>
+                                                <li class="dropdown_menu_item"><a href="<?php the_permalink(); ?>" class="dropdown_menu_link"><?php the_title(); ?></a></li>
+                                                <?php
+                                            endwhile;
+                                            wp_reset_postdata();
+                                        else :
+                                            echo '<li class="dropdown_menu_item">Нет товаров</li>';
+                                        endif;
+                                        ?>
                                     </ul>
                                 </div>
                             </div>
                         </li>
-                        <li class="main_navigation_list_item"><a href="" class="main_navigation_link">About</a></li>
+                        <li class="main_navigation_list_item"><a href="/about-us" class="main_navigation_link">About</a></li>
                         <li class="main_navigation_list_item">
-                            <a href="" class="main_navigation_link">Services</a>
+                            <a href="/services" class="main_navigation_link">Services</a>
                             <div class="dropdown_menu">
                                 <div class="dropdown_menu_container">
                                     <ul class="dropdown_menu_list">
@@ -93,55 +106,3 @@
                 </div>
             </div>
         </header>
-
-
-        <section class="about_section">
-            <div class="container about_section_container">
-                <div class="about_section_title_container">
-                    <h3 class="about_title">
-                        About Us
-                    </h3>
-                </div>
-
-                <div class="about_section_text_container">
-                    <p class="about_text">
-                        <strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</strong> Vero dolorum nemo saepe placeat soluta, ad minus incidunt voluptate harum eos distinctio, impedit ducimus, laborum cum. Libero deserunt qui tenetur in!
-                        Obcaecati, ullam blanditiis laboriosam quae error reiciendis, maxime corrupti consequatur aut itaque nesciunt cum libero veniam laborum modi dolor beatae voluptate. Expedita debitis distinctio in quae ipsum voluptatibus rem ducimus.
-                        Nemo mollitia asperiores iusto! Harum ipsa tempore, cum neque, quod nemo quidem placeat cupiditate animi repellendus sint itaque. Officiis praesentium dolorem voluptatem distinctio neque beatae laborum, autem quaerat repudiandae in.
-                        Suscipit nesciunt, nisi sint quos mollitia est, id odit aspernatur autem eligendi corrupti dignissimos soluta et harum ipsum itaque reiciendis accusamus natus at enim quibusdam fuga. Harum, fugiat. Facilis, optio!
-                        Ipsa placeat inventore fugit blanditiis assumenda facere perferendis ducimus at! Accusantium tempora fuga odit rem, fugit eos ipsa inventore! Itaque amet eum fugit fugiat minus explicabo harum officia similique cumque.
-                        Deleniti maxime laborum voluptate, et alias porro officiis fugiat quos consequatur expedita ut corporis nisi placeat inventore tenetur iusto, sapiente sit temporibus tempore nostrum vel animi. Provident distinctio amet consectetur?
-                        Quos minima deserunt ducimus quisquam eveniet, eos voluptatibus esse rem corrupti illo consequatur quam! Hic iusto porro, omnis tempora similique reprehenderit atque commodi eius odio itaque nulla, assumenda iste maxime!
-                        Quasi, possimus accusamus enim est, quaerat impedit, incidunt quam ullam atque laudantium iste similique? Sed sint porro, laboriosam veniam explicabo dignissimos, corporis eveniet quos cumque repellendus officia vitae magni excepturi.
-                        Ullam est explicabo a officiis, fugiat eaque voluptas? Velit dolores fugiat vel odio! Non, ipsam itaque. Ipsa saepe cupiditate pariatur iusto voluptatum animi laborum nihil corrupti laudantium iste, quod consequuntur.
-                        Dicta explicabo, laboriosam quibusdam nostrum velit et doloremque facilis ipsam officia nemo adipisci maxime asperiores porro amet harum perspiciatis iure neque voluptates, eos nobis culpa. Vero harum iure perferendis earum.
-                    </p>
-                    <p class="about_text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eveniet in sunt nostrum ipsam magni expedita impedit. Iusto eligendi soluta hic aut necessitatibus ut, praesentium molestiae corporis corrupti quo dignissimos?
-                        Accusamus unde provident error consequuntur soluta dicta quis asperiores sint mollitia quo? Dolores itaque dolorum minus placeat voluptate iure natus at sequi repellendus magni. Reiciendis laudantium consequuntur sed quam magni.
-                        Tempora numquam iste autem consequuntur expedita officiis quod sapiente praesentium esse magni. Eligendi consequuntur est eveniet? Molestias nobis omnis maiores eligendi, architecto blanditiis similique atque aliquid, minima itaque sit animi.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <div class="container footer_container">
-                <div class="footer_logo_container">
-                    <h2 class="footer_logo">
-                        Papir'Rs
-                    </h2>
-                </div>
-                <div class="footer_1_col">
-                    
-                </div>
-                <div class="footer_2_col"></div>
-            </div>
-        </footer>
-
-
-
-    </main>
-    
-</body>
-</html>
