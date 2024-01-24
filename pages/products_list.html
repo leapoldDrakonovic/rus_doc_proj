@@ -8,9 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>{object.name} page</title>
+    <title>Products list</title>
 </head>
 <body>
+
     <main class="page">
         <header class="header small_header">
             <div class="container header_container">
@@ -105,96 +106,19 @@
 
 
 
-     
-        <section class="item_section main_item_section">
-            <div class="container main_item_section_container">
-
-
-                <h3 class="main_item_section_title">
-                    {object.title} + Download
-                </h3>
-
-                <div class="main_item_section_product_container">
-                    <div class="product_img_container">
-                        <img src="../assets/img/doc.jpg" alt="Document" class="product_img">
-                    </div>
-                    <div class="product_description_container">
-                        <p class="product_description">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut blanditiis eius iure sequi, aliquid dolore expedita eum fuga veniam consequatur odit esse repellendus quae animi unde maiores ad porro similique.
-                            Soluta unde eius officiis tenetur necessitatibus provident ea quia ducimus libero! Quas, nesciunt pariatur iure reiciendis modi minima at sequi, delectus excepturi porro rerum, expedita ipsam magni voluptates eum consequuntur!
-                            Laboriosam iusto non rerum dolorum quia eum animi voluptates sunt ipsam suscipit? Velit ea quos explicabo, hic animi in reprehenderit earum eum aliquam adipisci libero tempore odit tempora accusamus molestiae.
-                            In dolorum aperiam iusto alias, rem quis molestiae, ea sunt nemo fuga exercitationem, eius omnis repudiandae veniam assumenda cupiditate magni qui accusantium officiis ex quaerat commodi nam similique. Praesentium, reiciendis?
-                        </p>
-                        <a href="" class="product_instruction_link">Link for  instruction</a>
-                    </div>
+        <section class="product_list_section">
+            <div class="container product_list_section_container">
+                <div class="product_list_title_container">
+                    <h3 class="product_list_title">Documents/Services</h3>
                 </div>
-
-
-
-
-
-            </div>
-        </section>
-
-
-        <section class="item_section item_form_section">
-            <div class="container item_form_section_container">
-
-
-                <div class="item_form_title_container">
-                    <h3 class="item_form_title">
-                        Fill the form
-                    </h3>
-                </div>
-
-                <div class="item_form_container">
-                    <form action="" class="callback_form">
-                        <div class="callback_form_context_container">
-                            <label for=""><span>Full name</span></label>
-                            <br>
-                            <input type="text" class="form-input callback_name_input" placeholder="Full Name">
-                            <div class="rod_container">
-                                <input type="checkbox">
-                                <label for="">Man</label>
-                                <input type="checkbox">
-                                <label for="">Women</label>
-                            </div>
-                            <br>
-                            <label for=""><span>Email</span></label>
-                            <br>
-                            <input type="text" class="form-input" placeholder="Email">
-                            <br>
-                            <label for=""><span>Passport Info</span></label>
-                            <br>
-                            <div class="passport_data_container">
-                                <div class="passport_number_container">
-                                    <input type="text" class="form-input passport_serial_input" placeholder="Серия">
-                                    <input type="text" class="form-input passport_number_input" placeholder="Номер">
-                                </div>
-                                <input type="text" class="form-input passport_who_input" placeholder="Кем выдан">
-                                <input type="text" class="form-input passport_date_input" placeholder="Дата выдачи">
-                                <input type="text" class="form-input passport_forDate_input" placeholder="Действителен до">
-                            </div>
-                            <br>
-                            <label for=""><span>Address</span></label>
-                            <br>
-                            <input type="text" class="form-input callback_address_input" placeholder="Adress">
-                            <br>
-                            <label for=""><span>Mobile phone</span></label>
-                            <br>
-                            <input type="text" class="form-input callback_phone_input" placeholder="Phone">
-                            <br>
-                            <div class="access_container">
-                                <input type="checkbox">
-                                <label for="">Privat terms accept</label>
-                            </div>
-                            <button class="submit_form_btn blue_btn">Pay</button>
-            
-                        </div>
-                    </form>
-                </div>
-
-
+                <ul class="product_list">
+                    <li class="product_list_item"><a href="" class="product_list_item_link">Lorem ipsum dolor sit.</a></li>
+                    <li class="product_list_item"><a href="" class="product_list_item_link">Lorem, ipsum.</a></li>
+                    <li class="product_list_item"><a href="" class="product_list_item_link">Lorem ipsum dolor sit amet consectetur adipisicing.</a></li>
+                    <li class="product_list_item"><a href="" class="product_list_item_link">Lorem ipsum dolor sit.</a></li>
+                    <li class="product_list_item"><a href="" class="product_list_item_link">Lorem ipsum dolor sit.</a></li>
+                    <li class="product_list_item"><a href="" class="product_list_item_link">Lorem ipsum dolor sit amet consectetur adipisicing.</a></li>
+                </ul>
             </div>
         </section>
 
@@ -211,8 +135,7 @@
                 <div class="footer_2_col"></div>
             </div>
         </footer>
-
-    </main>
+</main>
+    
 </body>
-<script src="../src/script/drop_down.js"></script>
 </html>

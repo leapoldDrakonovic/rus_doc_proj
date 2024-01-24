@@ -512,7 +512,7 @@ margin-bottom: 60px;
 =================Страница Документа======================
 */
 
-.item_page_search_container {
+.page_search_container {
     margin-top: 60px;
 }
 
@@ -600,7 +600,52 @@ margin-bottom: 60px;
     font-weight: 600;
 }
 .item_form_container {
+    margin-top: 50px;
+    background-color: #fff;
 }
+
+
+
+
+/* 
+=========================================================
+===============Страница со списком сервисов===============
+=========================================================
+*/
+.product_list_section {
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+.container {
+}
+.product_list_section_container {
+}
+.product_list_title_container {
+}
+.product_list_title {
+    color: var(--dark-blue);
+    font-weight: 600;
+    font-size: 50px;
+}
+.product_list {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+.product_list_item {
+}
+.product_list_item_link {
+    font-size: 24px;
+    color: var(--dark-blue);
+    transition: .2s linear;
+}
+
+.product_list_item_link:hover {
+    color: var(--main-orange);
+}
+
 
 
 
@@ -618,10 +663,10 @@ margin-bottom: 60px;
 /* Основная форма */
 
 .callback_form {
-    border: 1px solid black;
     max-width: 380px;
     height: fit-content;
     padding: 20px;
+    box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.25);
 }
 
 .callback_form_context_container {
