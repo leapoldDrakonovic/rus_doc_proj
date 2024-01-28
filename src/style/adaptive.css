@@ -1,0 +1,27 @@
+/* 
+====================================
+=======Header Шапка Навигация=======
+====================================
+*/
+
+
+@media screen and (max-width: 898px) {
+
+    .main_navigation {
+        display: none;
+    }
+
+    .bascket_container {
+        display: none;
+    }
+
+    .burger_btn_container {
+        display: flex !important;
+    }
+
+    .small_header {
+        display: none !important;
+    }
+
+
+}
