@@ -20,7 +20,7 @@
                         <form action="" class="search_form">
                             <input type="text" class="search_input" placeholder="Search">
                             <button class="search_btn light_blue_btn">
-                                <img src="../assets/icons/search.svg" alt="">
+                                <img src="<?php $C_ICONS_DIR?>/search.svg" alt="">
                             </button>
                         </form>
                     </div>
@@ -194,7 +194,7 @@
                         <li class="faq_list_item">
                             <div class="faq_list_item_title_container">
                                 <h4 class="faq_list_item_title">Что то там какой то вопрос?</h4>
-                                <img src="./assets/icons/dark_blue_arrow.svg" alt="" class="faq_list_item_img">
+                                <img src="<?php echo C_ICONS_DIR?>/dark_blue_arrow.svg" alt="" class="faq_list_item_img">
                             </div>
                             <div class="faq_list_item_answer_container">
                                 <p class="faq_answer">
@@ -205,7 +205,7 @@
                         <li class="faq_list_item">
                             <div class="faq_list_item_title_container">
                                 <h4 class="faq_list_item_title">Что то там какой то вопрос?</h4>
-                                <img src="./assets/icons/dark_blue_arrow.svg" alt="" class="faq_list_item_img">
+                                <img src="<?php echo C_ICONS_DIR?>/dark_blue_arrow.svg" alt="" class="faq_list_item_img">
                             </div>
                             <div class="faq_list_item_answer_container">
                                 <p class="faq_answer">
@@ -216,7 +216,7 @@
                         <li class="faq_list_item">
                             <div class="faq_list_item_title_container">
                                 <h4 class="faq_list_item_title">Что то там какой то вопрос?</h4>
-                                <img src="./assets/icons/dark_blue_arrow.svg" alt="" class="faq_list_item_img">
+                                <img src="<?php echo C_ICONS_DIR?>/dark_blue_arrow.svg" alt="" class="faq_list_item_img">
                             </div>
                             <div class="faq_list_item_answer_container">
                                 <p class="faq_answer">

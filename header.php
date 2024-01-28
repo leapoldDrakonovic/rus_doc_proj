@@ -104,5 +104,38 @@
                 <div class="bascket_container">
                     <a href="">Cart</a>
                 </div>
+                <div class="burger_btn_container">
+                    <span class="burger_btn_span" id="burger_btn_span_first"></span>
+                    <span class="burger_btn_span" id="burger_btn_span_second"></span>
+                    <span class="burger_btn_span" id="burger_btn_span_third"></span>
+                </div>
             </div>
         </header>
+
+
+        <div class="burger_menu">
+            <div class="burger_menu_container">
+                <nav class="burger_menu_navigation">
+                    <ul class="burger_menu_nav_list">
+                        <li class="burger_menu_nav_item">
+                            <a href="" class="burger_menu_nav_link">Cart</a>
+                        </li>
+                        <li class="burger_menu_nav_item">
+                            <a href="/documents" class="burger_menu_nav_link">Documents</a>
+                        </li>
+                        <li class="burger_menu_nav_item">
+                            <a href="/about-us" class="burger_menu_nav_link">About</a>
+                        </li>
+                        <li class="burger_menu_nav_item">
+                            <a href="/documents" class="burger_menu_nav_link">Services</a>
+                        </li>
+                        <li class="burger_menu_nav_item">
+                            <a href="" class="burger_menu_nav_link">Contact Us</a>
+                        </li>
+                        <li class="burger_menu_nav_item">
+                            <a href="" class="burger_menu_nav_link">Language</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>

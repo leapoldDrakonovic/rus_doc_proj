@@ -2,6 +2,7 @@
 @import url(./_const.css);
 @import url(./ui/buttons.css);
 @import url(./ui/inputs.css);
+@import url(./adaptive.css);
 
 
 
@@ -45,6 +46,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    
 }
 ol, ul {
 	list-style: none;
@@ -67,9 +71,6 @@ a {
     text-decoration: inherit; /* no underline */
   }
 
-  body {
-    font-family: 'Montserrat', sans-serif;
-}
 
 
 /* Главные контейнер */
@@ -79,6 +80,8 @@ a {
     display: flex;
     flex-direction: column;
     position: relative;
+
+    overflow-x: hidden;
 
     
 }
@@ -218,6 +221,98 @@ a {
     background-color: var(--dark-blue);
     color: white;
 }
+
+
+
+/* Бургер навигация Burger menu */
+
+.burger_btn_container {
+    display: none;
+    width: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    gap: 7px;
+    cursor: pointer;
+    position: relative;
+}
+
+.burger_btn_span {
+    display: block;
+    height: 1px;
+    width: 30px;
+    background-color: var(--dark-blue);
+    transition: .2s linear;
+}
+
+.burger_btn_span.active:first-child{
+    transform: rotate(45deg);
+    top: 50%;
+    position: absolute;
+
+}
+
+.burger_btn_span.active:last-child{
+    transform: rotate(-45deg);
+    top: 50%;
+    position: absolute;
+
+
+}
+
+.burger_btn_span.hidden {
+    display: none;
+}
+
+
+
+
+.burger_menu {
+    position: fixed;
+    visibility: hidden;
+    right: -200%;
+
+    top: 80px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-blue);
+    position: absolute;
+    transition: .2s linear;
+}
+
+.burger_menu.active {
+    right: 0;
+    visibility: visible;
+}
+
+.burger_menu_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.burger_menu_navigation {
+}
+.burger_menu_nav_list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+}
+.burger_menu_nav_item {
+}
+.burger_menu_nav_link {
+    display: block;
+    padding: 30px 20px;
+
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+}
+
 
 
 
@@ -782,10 +877,12 @@ margin-bottom: 60px;
 /* Поиск */
 
 .search_container {
+    width: 100%;
 }
 .search_form {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 .search_input {
     outline: none;
