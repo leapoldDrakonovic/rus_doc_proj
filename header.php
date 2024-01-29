@@ -102,7 +102,11 @@
                     </ul>
                 </nav>
                 <div class="bascket_container">
-                    <a href="">Cart</a>
+                    <a href="" class="cart_link">Cart</a>
+                </div>
+                <div class="auth_container">
+                    <a href="/login" class="auth_link login_link">Login</a>
+                    <a href="" class="auth_link registration_link">Registration</a>
                 </div>
                 <div class="burger_btn_container">
                     <span class="burger_btn_span" id="burger_btn_span_first"></span>

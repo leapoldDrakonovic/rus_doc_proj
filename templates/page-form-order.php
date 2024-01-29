@@ -1,4 +1,4 @@
-<?php wp_header();?>
+<?php get_header();?>
 
 <div class="item_form_container">
 <form action="" class="callback_form">
@@ -47,4 +47,4 @@
         </form>
 </div>
 
-<?php wp_footer();?>
+<?php get_footer();?>
