@@ -684,7 +684,7 @@ margin-bottom: 60px;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    height: 900px;
+    height: 500px;
 }
 .item_form_title_container {
     margin-top: 50px;
@@ -704,6 +704,38 @@ margin-bottom: 60px;
 }
 
 
+.item_buy_container {
+    margin-top: 60px;
+    background-color: #fff;
+    padding: 40px 20px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.item_buy_list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+.item_buy_item {
+}
+.item_buy_price {
+    
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.item_buy_link {
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 15px 40px;
+}
+
+
+
+
+/* Карточка покупки */
 
 
 /* 

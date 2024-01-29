@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php wp_head(); ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../src/style/style.css">
+    <link rel="stylesheet" href="./src/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>{object.name} page</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Papirs - Landing</title>
 </head>
 <body>
     <main class="page">
@@ -49,28 +50,41 @@
         <header class="header main_header">
             <div class="container header_container">
                 <div class="header_logo">
-                    <h3 class="main_logo">Papir'rs</h3>
+                    <h3 class="main_logo"><a href="/">Papir'rs</a></h3>
                 </div>
                 <nav class="navigation main_navigation">
                     <ul class="main_navigation_list">
                         <li class="main_navigation_list_item">
-                            <a href="" class="main_navigation_link" id="documents_link">Documents</a>
+                            <a href="/documents" class="main_navigation_link" id="documents_link">Documents</a>
                             <div class="dropdown_menu">
                                 <div class="dropdown_menu_container">
                                     <ul class="dropdown_menu_list">
-                                        <li class="dropdown_menu_item"><a href="" class="dropdown_menu_link">Papire papir</a></li>
-                                        <li class="dropdown_menu_item"><a href="" class="dropdown_menu_link">Papire papir</a></li>
-                                        <li class="dropdown_menu_item"><a href="" class="dropdown_menu_link">Papire papir</a></li>
-                                        <li class="dropdown_menu_item"><a href="" class="dropdown_menu_link">Papire papir</a></li>
-                                        <li class="dropdown_menu_item"><a href="" class="dropdown_menu_link">Papire papir</a></li>
-                                        <li class="dropdown_menu_item"><a href="" class="dropdown_menu_link">Papire papir</a></li>
+                                        <?php
+                                        $args = array(
+                                            'post_type' => 'product',
+                                            'posts_per_page' => -1,
+                                        );
+
+                                        $products = new WP_Query($args);
+
+                                        if ($products->have_posts()) :
+                                            while ($products->have_posts()) : $products->the_post();
+                                                ?>
+                                                <li class="dropdown_menu_item"><a href="<?php the_permalink(); ?>" class="dropdown_menu_link"><?php the_title(); ?></a></li>
+                                                <?php
+                                            endwhile;
+                                            wp_reset_postdata();
+                                        else :
+                                            echo '<li class="dropdown_menu_item">Нет товаров</li>';
+                                        endif;
+                                        ?>
                                     </ul>
                                 </div>
                             </div>
                         </li>
-                        <li class="main_navigation_list_item"><a href="" class="main_navigation_link">About</a></li>
+                        <li class="main_navigation_list_item"><a href="/about-us" class="main_navigation_link">About</a></li>
                         <li class="main_navigation_list_item">
-                            <a href="" class="main_navigation_link">Services</a>
+                            <a href="/services" class="main_navigation_link">Services</a>
                             <div class="dropdown_menu">
                                 <div class="dropdown_menu_container">
                                     <ul class="dropdown_menu_list">
@@ -90,93 +104,38 @@
                 <div class="bascket_container">
                     <a href="">Cart</a>
                 </div>
+                <div class="burger_btn_container">
+                    <span class="burger_btn_span" id="burger_btn_span_first"></span>
+                    <span class="burger_btn_span" id="burger_btn_span_second"></span>
+                    <span class="burger_btn_span" id="burger_btn_span_third"></span>
+                </div>
             </div>
         </header>
 
 
-        <div class="container page_search_container">
-            <form action="" class="search_form">
-                <input type="text" class="search_input" placeholder="Search">
-                <button class="search_btn light_blue_btn">
-                    <img src="../assets/icons/search.svg" alt="">
-                </button>
-            </form>
-        </div>
-
-
-
-     
-        <section class="item_section main_item_section">
-            <div class="container main_item_section_container">
-
-
-                <h3 class="main_item_section_title">
-                    {object.title} + Download
-                </h3>
-
-                <div class="main_item_section_product_container">
-                    <div class="product_img_container">
-                        <img src="../assets/img/doc.jpg" alt="Document" class="product_img">
-                    </div>
-                    <div class="product_description_container">
-                        <p class="product_description">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut blanditiis eius iure sequi, aliquid dolore expedita eum fuga veniam consequatur odit esse repellendus quae animi unde maiores ad porro similique.
-                            Soluta unde eius officiis tenetur necessitatibus provident ea quia ducimus libero! Quas, nesciunt pariatur iure reiciendis modi minima at sequi, delectus excepturi porro rerum, expedita ipsam magni voluptates eum consequuntur!
-                            Laboriosam iusto non rerum dolorum quia eum animi voluptates sunt ipsam suscipit? Velit ea quos explicabo, hic animi in reprehenderit earum eum aliquam adipisci libero tempore odit tempora accusamus molestiae.
-                            In dolorum aperiam iusto alias, rem quis molestiae, ea sunt nemo fuga exercitationem, eius omnis repudiandae veniam assumenda cupiditate magni qui accusantium officiis ex quaerat commodi nam similique. Praesentium, reiciendis?
-                        </p>
-                        <a href="" class="product_instruction_link">Link for  instruction</a>
-                    </div>
-                </div>
-
-
-
-
-
-            </div>
-        </section>
-
-
-        <section class="item_section item_form_section">
-            <div class="container item_form_section_container">
-
-
-                <div class="item_form_title_container">
-                    <h3 class="item_form_title">
-                        Buy for you
-                    </h3>
-                </div>
-
-                <div class="item_buy_container">
-                    <ul class="item_buy_list">
-                        <li class="item_buy_item">Гарантии качества</li>
-                        <li class="item_buy_item">Безопасное скачивание</li>
-                        <li class="item_buy_item">Голова не варит</li>
-                        <li class="item_buy_item">4 утра, качайте класс</li>
+        <div class="burger_menu">
+            <div class="burger_menu_container">
+                <nav class="burger_menu_navigation">
+                    <ul class="burger_menu_nav_list">
+                        <li class="burger_menu_nav_item">
+                            <a href="" class="burger_menu_nav_link">Cart</a>
+                        </li>
+                        <li class="burger_menu_nav_item">
+                            <a href="/documents" class="burger_menu_nav_link">Documents</a>
+                        </li>
+                        <li class="burger_menu_nav_item">
+                            <a href="/about-us" class="burger_menu_nav_link">About</a>
+                        </li>
+                        <li class="burger_menu_nav_item">
+                            <a href="/documents" class="burger_menu_nav_link">Services</a>
+                        </li>
+                        <li class="burger_menu_nav_item">
+                            <a href="" class="burger_menu_nav_link">Contact Us</a>
+                        </li>
+                        <li class="burger_menu_nav_item">
+                            <a href="" class="burger_menu_nav_link">Language</a>
+                        </li>
                     </ul>
-                    <span class="item_buy_price">Price: 0.99 евреев</span>
-                    <a href="" class="item_buy_link blue_btn">Buy</a>
-                </div>
-
-
+                </nav>
             </div>
-        </section>
-
-        <footer class="footer">
-            <div class="container footer_container">
-                <div class="footer_logo_container">
-                    <h2 class="footer_logo">
-                        Papir'Rs
-                    </h2>
-                </div>
-                <div class="footer_1_col">
-                    
-                </div>
-                <div class="footer_2_col"></div>
-            </div>
-        </footer>
-
-    </main>
-</body>
-<script src="../src/script/drop_down.js"></script>
-</html>
+        </div>
