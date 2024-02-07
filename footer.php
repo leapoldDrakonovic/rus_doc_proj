@@ -19,5 +19,6 @@
 <script src="./src/script/drop_down.js"></script>
 <script src="./src/script/faq_dropdown.js"></script>
 <script src="./src/script/burger_menu.js"></script>
+<script src="./src/script/cart_add.js"></script>
 
 </html>

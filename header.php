@@ -102,7 +102,7 @@
                     </ul>
                 </nav>
                 <div class="bascket_container">
-                    <a href="" class="cart_link">Cart</a>
+                    <a href="/cart" class="cart_link">Cart</a>
                 </div>
                 <div class="auth_container">
                     <a href="/login" class="auth_link login_link">Login</a>

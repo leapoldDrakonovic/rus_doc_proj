@@ -18,9 +18,12 @@
 
         global $product;
         $product_id = $product->get_id();
-        $form_page_url = $product->get_attribute('form');; 
+        $form_page_url = $product->get_attribute('form');
+        $instruction_url = $product->get_attribute('in_link');
         $image_id = $product->get_image_id(); 
         $image_url = wp_get_attachment_url($image_id);
+        $price = $product->get_regular_price();
+
 
 
         if ($product) :
@@ -42,8 +45,11 @@
             </div>
             <div class="product_description_container">
                 <div class="product_description">
-                    <?php echo $product->get_description(); ?>
-                    <a href="<?php echo wp_get_attachment_url(get_post_thumbnail_id($product_id)); ?>" class="product_instruction_link" download>Download Instruction</a>
+                    <p><?php echo $product->get_description(); ?></p>
+                    
+                    <div class="instruction_link"> 
+                    <a href="<?php echo $instruction_url ?>" class="product_instruction_link" download>Download Instruction</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,9 +74,28 @@
                     </h3>
                 </div>
 
-                <div class="item_form_container">
-                    <?php echo '<a href="' . $form_page_url . '">Go to Form</a>'; ?>
+                
+                <div class="item_buy_container">
+                    <ul class="item_buy_list">
+                        <li class="item_buy_item">Гарантии качества</li>
+                        <li class="item_buy_item">Безопасное скачивание</li>
+                        <li class="item_buy_item">Голова не варит</li>
+                        <li class="item_buy_item">4 утра, качайте класс</li>
+                    </ul>
+                    <span class="item_buy_price">
+                        Price: <?php 
+
+                        if ($price) {
+                            echo $price;
+                        } else {
+                            echo "No price";
+                        }
+                        ?> 
+                    </span>
+                    <a href="<?php echo  $form_page_url ?>" class="item_buy_link blue_btn">Buy</a>
+                    <button class="item_buy_link blue_btn" onClick="<?php WC()->cart->add_to_cart($product_id)?>">Test to cart</button>
                 </div>
+                
 
 
             </div>

@@ -16,9 +16,12 @@ function theme_add_scripts() {
     wp_enqueue_script( 'script-dropdown', get_template_directory_uri() .'/src/script/drop_down.js', array(), '1.0', true );
     wp_enqueue_script( 'script-burger', get_template_directory_uri() .'/src/script/burger_menu.js', array(), '1.0', true );
     wp_enqueue_script( 'script-faq', get_template_directory_uri() .'/src/script/faq_dropdown.js', array(), '1.0', true );
+    wp_enqueue_script( 'script-cart-add', get_template_directory_uri() .'/src/script/cart_add.js', array(), '1.0', true );
 
     
 }
+
+
 
 add_action( 'wp_enqueue_scripts', 'theme_add_scripts' );
 
